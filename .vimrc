@@ -1,5 +1,3 @@
-vimrc
-
 syntax on
 set nu
 set ai
