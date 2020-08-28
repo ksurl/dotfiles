@@ -6,6 +6,7 @@ set hlsearch
 set expandtab
 set tabstop=4
 set visualbell
+set pastetoggle=<F2>
 filetype plugin on
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
