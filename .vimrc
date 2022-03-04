@@ -1,18 +1,24 @@
 " vim
 set number
-set ai
 set ruler
 set pastetoggle=<F2>
 set expandtab
 set tabstop=2
+set smarttab
 set showmatch
 set ignorecase
+set smartcase
 set hlsearch
+set hidden
+set nomodeline
 set autoindent
 filetype plugin indent on
 set shiftwidth=2
+set shiftround
 set softtabstop=2
 set mouse=a
+set wildmenu
+set wildmode=list:longest
 set splitright
 set splitbelow
 
@@ -57,10 +63,10 @@ let g:lightline = {
       \ }
 
 " nvcode
-let g:nvcode_termcolors=256
+let g:nvcode_termcolors = 256
 
 " NERDTree
-let g:NERDTreeShowHidden=1
+let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
@@ -68,6 +74,12 @@ let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " toggle NERDTree with Ctrl+B
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+
+" NERDCommenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 colorscheme nvcode
 
@@ -87,3 +99,8 @@ function! OpenTerminal()
   resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
+
+" Mappings
+let mapleader = ","
+inoremap jj <esc>
+
